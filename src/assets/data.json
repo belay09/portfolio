@@ -1,194 +1,120 @@
 {
     "profile": {
-        "name": "Nabilah Argyanti",
-        "bio": "I graduated in Informatics Engineering and have one year of industry experience. My main interests are web development and data processing. I am skilled in creating web applications, especially using Laravel and Vue.js. Currently, I'm exploring new web technologies and learning how data processing can solve practical problems effectively.",
-        "resume_url": "/CV - Nabilah Argyanti.pdf",
-        "email": "nargyanti@gmail.com",
-        "image": "/images/profile-picture.webp",
+        "name": "Belay Sirak",
+        "bio": "I am a full-stack developer with 2 years of experience in both frontend and backend development. I have a strong foundation in building dynamic, user-focused web applications and a passion for creating seamless, responsive designs. I’m committed to continuously expanding my technical skills and adapting to new tools and practices to deliver innovative and effective solutions in an ever-evolving field.",
+        "resume_url": "/belay_cv.pdf",
+        "email": "belay.sirak@example.com",
+        "image": "/images/pro.jpg",
         "accounts": {
-            "github": "https://github.com/nargyanti",
-            "linkedin": "https://www.linkedin.com/in/nargyanti/",
-            "instagram": "https://www.instagram.com/nargyanti"
+            "github": "https://github.com/belay09",
+            "linkedin": "https://www.linkedin.com/in/belay-sirak-801008224/",
+            "upwork": "https://www.upwork.com/freelancers/~01c8eff5783c50d188?mp_source=share"
         }
     },
     "education": {
-        "institution": "Politeknik Negeri Malang",
+        "institution": "Bahir Dar University",
         "icon": "material-symbols:school",
-        "degree": "Applied Bachelor of Informatics Engineering (2019-2023)",
-        "thesis": "Thesis: Recipes Recommendation System Based on Ingredients Availability and User Preferences",
+        "degree": "Bachelor's degree in Information Technology (2019-2023)",
+        "thesis": "Thesis: Web Application called 'Chewata Social Media'",
         "subjects": [
             "Advanced Web Programming",
-            "Cloud Computing",
-            "Advanced Database",
-            "Big Data"
+            "Database Management",
+            "Data Structures and Algorithms",
+            "Software Engineering"
         ]
     },
     "technical_skills": [
         {
             "icon": "material-symbols:web",
             "category": "Web Development",
-            "description": "I'm experienced in web development, creating dynamic applications, managing complex data interactions efficiently, and addressing a wide range of web-based requirements effectively.",
+            "description": "I specialize in creating dynamic web applications, managing frontend interfaces with modern technologies, and building responsive designs.",
             "skills": [
-                "Laravel",
                 "Vue.js",
-                "CodeIgniter",
+                "Nuxt.js",
+                "React.js",
                 "Tailwind CSS",
-                "Django",
-                "WordPress"
+                "HTML5",
+                "CSS3",
+                "JavaScript"
             ]
         },
         {
             "icon": "mdi:database-cog",
-            "category": "Data Science",
-            "description": "I'm capable of processing and analyzing data using fundamental techniques in data science to extract meaningful insights and support data-driven decision-making.",
+            "category": "Backend Development",
+            "description": "I have experience building and integrating backend systems using Node.js and databases like MongoDB and PostgreSQL.",
             "skills": [
-                "Python",
-                "Pandas",
-                "Matplotlib",
-                "Tensorflow"
+                "Node.js",
+                "ExpressJS",
+                "Hasura GraphQL",
+                "MongoDB",
+                "PostgreSQL"
             ]
         }
     ],
     "work_experience": [
         {
             "icon": "ic:sharp-home-work",
-            "title": "IT Staff at PT Semangat Bersama Entrepreneurship",
-            "period": "July 2024 - now",
+            "title": "Full Stack Developer at Minab IT Solutions",
+            "period": "February 2024 - Present",
             "jobdesk": [
-                "Designed system requirements based on user needs to ensure an efficient and effective system",
-                "Developed Laravel-based web applications to manage seed production data, covering the entire process from cultivation to production",
-                "Performed routine maintenance and troubleshooting of web applications to ensure optimal availability and functionality for users"
+                "Developed and maintained the frontend of a song management application using Vue.js and Nuxt.js.",
+                "Integrated backend services with GraphQL using Hasura, and managed REST APIs with Node.js.",
+                "Collaborated in a team to ensure seamless integration between frontend and backend services."
             ]
         },
         {
             "icon": "ic:sharp-home-work",
-            "title": "Programmer at UPA TIK Politeknik Negeri Malang",
-            "period": "September 2023 - July 2024",
+            "title": "Frontend Developer at Freelance",
+            "period": "January 2022 - Present",
             "jobdesk": [
-                "Redesigned the profile website of Politeknik Negeri Malang and its departments to enhance user experience and facilitate information delivery using WordPress and Elementor",
-                "Developed the PPID website for Politeknik Negeri Malang to ensure public information transparency using WordPress and Elementor",
-                "Created starter code with Laravel to streamline the development process and provide a template for customized system needs"
-            ]
-        },
-        {
-            "icon": "ic:sharp-home-work",
-            "title": "Backend Developer at PT Adma Digital Solusi",
-            "period": "August 2022 - December 2022",
-            "jobdesk": [
-                "Managed recipe and food ingredient data to recommend recipes through web scraping using Python",
-                "Developed a recipe recommendation system based on ingredient availability using Django"
-            ]
-        },
-        {
-            "icon": "ic:sharp-home-work",
-            "title": "Web Developer at Awesome Language Stability",
-            "period": "September 2021 - November 2021",
-            "jobdesk": [
-                "Designed and developed a TOEFL prediction website using the CodeIgniter framework.",
-                "Collaborated with the project team to integrate necessary services in the development of the TOEFL prediction website, ensuring accuracy and reliability."
+                "Built and maintained responsive websites for various clients using Vue.js, Tailwind CSS, and Nuxt.js.",
+                "Provided ongoing support and maintenance to ensure websites remain up-to-date and optimized.",
+                "Collaborated with backend developers to integrate APIs into frontend applications."
             ]
         }
     ],
-    "projects": [
-        {
-            "title": "MTani Information System",
-            "description": "An information system designed to store, manage, and generate reports for seed production management, covering the entire process from seed cultivation to production.",
-            "image": "/images/projects/si-mtani.webp",
+    
+        "projects": [
+          {
+            "title": "Muya",
+            "description": "Muya offers a diverse set of technical and soft skills training for students, jobseekers and professionals alike. It offers capacity building programs of different types and levels partnering with a diverse set of development partners.",
+            "image": "/images/projects/muya.jpg",
             "tools": {
-                "laravel": "https://laravel.com/",
-                "bootstrap": "https://getbootstrap.com/"
+              "vuejs": "https://vuejs.org/",
+              "tailwindcss": "https://tailwindcss.com/",
+              "nuxtdotjs": "https://nuxtjs.org/",
+              "graphql": "https://graphql.org/"
+
+            },
+            "url": "https://muya.hahu.jobs/en"
+          },
+          {
+            "title": "Plan International",
+            "description": "Developed a user-friendly website for a childcare franchise model to empower young mothers to start home-based childcare services. Focused on responsive design, intuitive navigation, and interactive features like application forms and scheduling tools. Ensured seamless integration with backend systems and conducted user testing to refine the interface. The project provided mothers with a sustainable business opportunity, increased childcare availability, and supported community needs through a scalable, accessible platform.",
+            "image": "/images/projects/plan.png",
+            "tools": {
+                "vuejs": "https://vuejs.org/",
+                "graphql": "https://graphql.org/"
+,
+                "nuxtdotjs": "https://nuxtjs.org/",
+                "tailwindcss": "https://tailwindcss.com/"
             },
             "url": ""
-        },
-        {
-            "title": "Politeknik Negeri Malang's Official Website",
-            "description": "Informative platform providing comprehensive information about academic programs, academic activities, and the latest news related to Politeknik Negeri Malang.",
-            "image": "/images/projects/polinema.webp",
+          },
+          {
+            "title": "Sheger Gebeta",
+            "description": "Sheger Gebeta is a comprehensive platform designed to connect hospitality businesses, such as hotels, cafes, and restaurants, with customers, similar to Booking.com. I worked on the admin panel to manage places (e.g., hotels, restaurants), create entities, configure settings, and handle billing. The platform allows seamless creation and management of businesses, streamlining administrative tasks while enabling dynamic data updates and customer engagement.",
+            "image": "/images/projects/sheger.png",
             "tools": {
-                "wordpress": "https://wordpress.org/",
-                "elementor": "https://elementor.com/"
+                "vuejs": "https://vuejs.org/",
+                "tailwindcss": "https://tailwindcss.com/",
+              "nuxtdotjs": "https://nuxtjs.org/",
+              "graphql": "https://graphql.org/"
+
             },
-            "url": ""
-        },
-        {
-            "title": "Politeknik Negeri Malang's Department Website",
-            "description": "Informative platform providing comprehensive information about academic programs, academic activities, and the latest news related to the department at Politeknik Negeri Malang.",
-            "image": "/images/projects/department-polinema.webp",
-            "tools": {
-                "wordpress": "https://wordpress.org/",
-                "elementor": "https://elementor.com/"
-            },
-            "url": ""
-        },
-        {
-            "title": "PPID Politeknik Negeri Malang",
-            "description": "A website providing transparency in public information by offering easy and comprehensive access to information about activities, documents, and procedures related to Politeknik Negeri Malang.",
-            "image": "/images/projects/ppid-polinema.webp",
-            "tools": {
-                "wordpress": "https://wordpress.org/",
-                "elementor": "https://elementor.com/"
-            },
-            "url": "https://ppid.polinema.ac.id/"
-        },
-        {
-            "title": "EasyCook",
-            "description": "Recipe recommendation system that suggests dishes based on available ingredients and user preferences.",
-            "image": "/images/projects/easycook.webp",
-            "tools": {
-                "django": "https://www.djangoproject.com/",
-                "vuedotjs": "https://vuejs.org/"
-            },
-            "url": "https://gitlab.com/nargyanti/easycookapi"
-        },
-        {
-            "title": "E-Learning for Vocational High School",
-            "description": "E-learning platform that provides a comprehensive learning experience for students and teachers, including online courses, quizzes, and assignments.",
-            "image": "/images/projects/e-learning.webp",
-            "tools": {
-                "laravel": "https://laravel.com/",
-                "bootstrap": "https://getbootstrap.com/"
-            },
-            "url": ""
-        },
-        {
-            "title": "ANTI ManDec",
-            "description": "A website that reports the arrival and departure schedules of transportation at TPI Ngurah Rai.",
-            "image": "/images/projects/anti-mandec.webp",
-            "tools": {
-                "laravel": "https://laravel.com/",
-                "bootstrap": "https://getbootstrap.com/"
-            },
-            "url": ""
-        },
-        {
-            "title": "Quarter Life Projects Mentoring System",
-            "description": "A platform connecting mentees with mentors to schedule mentoring sessions efficiently.",
-            "image": "/images/projects/mentoring-qlp.webp",
-            "tools": {
-                "laravel": "https://laravel.com/",
-                "bootstrap": "https://getbootstrap.com/"
-            },
-            "url": "https://github.com/nargyanti/mentoring-qlp"
-        },
-        {
-            "title": "ALS TOEFL Prediction",
-            "description": "The website offers TOEFL prediction tests and provides score results immediately after the test.",
-            "image": "/images/projects/als-toefl-prediction.webp",
-            "tools": {
-                "codeigniter": "https://codeigniter.com/",
-                "bootstrap": "https://getbootstrap.com/"
-            },
-            "url": ""
-        },
-        {
-            "title": "Pap'a Catering",
-            "description": "Dedicated platform for managing catering orders, products, invoices, and financial transactions, designed specifically for Panti Asuhan Putri Aisyiyah Malang.",
-            "image": "/images/projects/papa-catering.webp",
-            "tools": {
-                "laravel": "https://laravel.com/",
-                "bootstrap": "https://getbootstrap.com/"
-            },
-            "url": "https://github.com/nargyanti/papa-catering"
-        }
-    ]
+            "url": "https://staging.admin.shegergebeta.com/"
+          }
+        ]
+      
+      
 }
