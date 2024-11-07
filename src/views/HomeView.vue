@@ -20,7 +20,7 @@ const { profile, education, technical_skills, work_experience, projects } = data
     <section id="hero" class="bg-gray-100 px-6 py-7 md:px-10 md:py-28 ">
         <div class="container mx-auto flex max-w-screen-xl flex-col items-center  lg:flex-row-reverse lg:items-start lg:gap-14">
             <!-- Profile Picture -->
-            <figure class="overflow-hidden h-[400px]  md:w-1/3 flex-shrink-0">
+            <figure class="overflow-hidden h-full md:w-1/3 flex-shrink-0">
                 <img :src="profile.image" alt="Profile" class="h-full w-full rounded-full shadow-lg object-cover" />
             </figure>
 

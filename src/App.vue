@@ -63,13 +63,28 @@ const toggleMenu = () => {
         </footer> -->
 
         <!-- Social Media -->
-        <div class="fixed bottom-4 left-4 flex flex-col gap-4 md:gap-6">
+        <div class="fixed bottom-4 right-0 flex flex-col gap-4 md:gap-6">
             <div v-for="(url, platform) in profile.accounts" :key="platform">
                 <ExternalLink :url="url">
                     <span class="sr-only">{{ platform }}</span>
-                    <Icon :icon="`${platform === 'upwork' ? 'cib' : 'mdi'}:${platform}`" class="text-black hover:text-primary-dark w-6 h-6 md:w-12 md:h-12" />
+                    <Icon :icon="`${platform === 'upwork' ? 'cib' : 'mdi'}:${platform}`" class="text-black hover:text-primary-dark w-6 h-6 md:w-10 md:h-10" />
                 </ExternalLink>
             </div>
         </div>
     </div>
+    <!-- <div
+
+    class="fixed px-3 py-2 text-sm font-bold text-white bg-gray-900 rounded bottom-4 left-4 z-50"
+  >
+    <span class="xxs:hidden">DEFAULT</span>
+    <span class="hidden xxs:inline-block xs:hidden">XXS</span>
+    <span class="hidden xs:inline-block sm:hidden">XS</span>
+    <span class="hidden sm:inline-block md:hidden">SM</span>
+    <span class="hidden md:inline-block lg:hidden">MD</span>
+    <span class="hidden lg:inline-block xl:hidden">LG</span>
+    <span class="hidden xl:inline-block 2xl:hidden">XL</span>
+    <span class="hidden 2xl:inline-block 3xl:hidden">2XL</span>
+    <span class="hidden 3xl:inline-block 4xl:hidden">3XL</span>
+    <span class="hidden 4xl:inline-block">4XL</span>
+  </div> -->
 </template>
