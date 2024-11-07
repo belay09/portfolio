@@ -17,8 +17,8 @@ const { profile, education, technical_skills, work_experience, projects } = data
 
 <template>
     <!-- Hero -->
-    <section id="hero" class="bg-gray-100 px-6 py-7 md:px-10 md:py-28 ">
-        <div class="container mx-auto flex max-w-screen-xl flex-col items-center  lg:flex-row-reverse lg:items-start lg:gap-14">
+    <section id="hero" class="bg-gray-100 px-6 py-7 md:px-10 md:py-28 min-h-screen">
+        <div class="container mx-auto flex max-w-screen-xl flex-col items-center gap-6 lg:flex-row-reverse lg:items-start lg:gap-14">
             <!-- Profile Picture -->
             <figure class="overflow-hidden h-full md:w-1/3 flex-shrink-0">
                 <img :src="profile.image" alt="Profile" class="h-full w-full rounded-full shadow-lg object-cover" />
@@ -29,13 +29,13 @@ const { profile, education, technical_skills, work_experience, projects } = data
                 <header>
                     <h1 class="text-3xl font-bold text-gray-900 md:text-5xl pb-2">
                         Hi there! I'm
-                        <span class="block text-primary  md:inline underline-image">{{ profile.name }}</span>
+                        <span class="block text-primary md:inline underline-image">{{ profile.name }}</span>
                     </h1>
                 </header>
                 <p class="text-gray-700">
                     {{ profile.bio }}
                 </p>
-                <div class="flex items-center justify-center gap-6 lg:justify-start ">
+                <div class="flex items-center justify-center gap-6 lg:justify-start">
                     <RouterLink :to="{ path: '/', hash: '#contact' }">
                         <PrimaryButton>Get in touch</PrimaryButton>
                     </RouterLink>
@@ -133,20 +133,22 @@ const { profile, education, technical_skills, work_experience, projects } = data
         </div>
     </section>
 </template>
-<style lang="css">
 
+<style scoped>
 .underline-image {
   position: relative;
+  display: inline-block;
 }
 
 .underline-image::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -30px;
+  bottom: -30px; /* Adjust this to change the distance from the text */
   height: 30px; /* Adjust this to change the thickness of the underline */
   width: 100%;
-  background: url("/public/serez.svg"); /* Replace with the path to your image */
+  background: url("/public/serez.png"); /* Replace with the path to your image */
   background-repeat: repeat-x;
+  background-size: contain;
 }
 </style>
