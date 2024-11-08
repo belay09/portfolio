@@ -240,7 +240,7 @@ const { profile, education, work_experience, projects, certifications } = data;
                 <SecondaryButton>
                     <IconText
                         :icon="'material-symbols:mail'"
-                        :text="profile.email"
+                        text="Send email"
                         :iconSize="28"
                     />
                 </SecondaryButton>
