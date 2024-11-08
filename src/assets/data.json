@@ -9,6 +9,7 @@
             "github": "https://github.com/belay09",
             "linkedin": "https://www.linkedin.com/in/belay-sirak-801008224/",
             "upwork": "https://www.upwork.com/freelancers/~01c8eff5783c50d188?mp_source=share"
+
         }
     },
     "education": {
@@ -51,6 +52,15 @@
             ]
         }
     ],
+    "certifications": [
+    {
+      "title": "Certificate in Full-Stack Development",
+      "url": "https://www.udemy.com/certificate/UC-adf476c0-d890-4fe5-8c65-9d7cb39691b7",
+      "institution": "Udemy",
+      "description": "Full Stack Web Development Course covering MERN stack, deployment, and CI/CD.",
+      "date": "January 2024"
+    }
+  ],
     "work_experience": [
         {
             "icon": "ic:sharp-home-work",
@@ -94,13 +104,13 @@
             "image": "/images/projects/plan.png",
             "tools": {
                 "vuejs": "https://vuejs.org/",
-                "graphql": "https://graphql.org/"
-,
+                "graphql": "https://graphql.org/",
+
                 "nuxtdotjs": "https://nuxtjs.org/",
                 "tailwindcss": "https://tailwindcss.com/"
             },
-            "url": ""
-          },
+            "url":"https://www.uymp.org/"
+        },
           {
             "title": "Sheger Gebeta",
             "description": "Sheger Gebeta is a comprehensive platform designed to connect hospitality businesses, such as hotels, cafes, and restaurants, with customers, similar to Booking.com. I worked on the admin panel to manage places (e.g., hotels, restaurants), create entities, configure settings, and handle billing. The platform allows seamless creation and management of businesses, streamlining administrative tasks while enabling dynamic data updates and customer engagement.",

@@ -6,6 +6,9 @@ defineProps({
     icon: {
         type: String,
     },
+    url: {
+        type: String,
+    },
     title: {
         type: String,
     },
@@ -33,14 +36,19 @@ defineProps({
     <div class="flex gap-4">
         <IconWrapper :icon="icon" />
         <div class="flex flex-col gap-2">
-            <div class="flex flex-col gap-0ew">
+            <div class="gap-0ew flex flex-col">
                 <h3 class="text-xl font-semibold text-gray-900">{{ title }}</h3>
                 <span class="text-gray-500">{{ sub_title }}</span>
             </div>
             <p class="text-gray-700">{{ description }}</p>
             <div v-if="items?.length > 0">
-                <ItemList :items="items" :column="column" :list_title="list_title" />
+                <ItemList
+                    :items="items"
+                    :column="column"
+                    :list_title="list_title"
+                />
             </div>
+            
         </div>
     </div>
 </template>
