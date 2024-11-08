@@ -14,10 +14,3 @@ app.use(router);
 app.mount("#app");
 AOS.init(); // Initialize AOS
 
-// Hide the loading spinner once the app is mounted
-window.addEventListener('load', () => {
-    const loader = document.getElementById('loader');
-    if (loader) {
-        loader.style.display = 'none';
-    }
-});
