@@ -1,7 +1,6 @@
 <script setup>
 import IconWrapper from "@/components/IconWrapper.vue";
 import ItemList from "@/components/ItemList.vue";
-
 defineProps({
     icon: {
         type: String,

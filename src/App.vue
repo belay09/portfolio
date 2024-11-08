@@ -20,7 +20,7 @@ const toggleMenu = () => {
 <template>
     <div class="flex min-h-screen flex-col">
         <!-- Header -->
-        <header class="h-[calc(100vh - 64px)] sticky top-0 z-50 bg-primary-light px-6 drop-shadow md:px-10" data-aos="fade-down">
+        <header class="h-[calc(100vh - 64px)] sticky top-0 z-50 bg-primary-light px-6 drop-shadow md:px-10" >
             <div class="mx-auto flex max-w-screen-xl flex-col items-center md:flex-row md:justify-between">
                 <div class="flex w-full items-center justify-between md:w-auto">
                     <!-- Logo -->
@@ -53,7 +53,8 @@ const toggleMenu = () => {
         </main>
 
         <!-- Social Media -->
-        <div class="fixed bottom-4 right-0 flex flex-col gap-4 md:gap-6" data-aos="fade-left">
+        <div class="fixed bottom-4 right-0 flex flex-col gap-4 md:gap-6" data-aos="fade-up"
+        data-aos-duration="3000">
             <div v-for="(url, platform) in profile.accounts" :key="platform">
                 <ExternalLink :url="url">
                     <span class="sr-only">{{ platform }}</span>

@@ -1,8 +1,6 @@
 <script setup>
 import { RouterLink } from "vue-router";
-
 import data from "@/assets/data.json";
-
 import ExternalLink from "@/components/ExternalLink.vue";
 import IconText from "@/components/IconText.vue";
 import PrimaryButton from "@/components/PrimaryButton.vue";
@@ -12,7 +10,7 @@ import SecondaryButton from "@/components/SecondaryButton.vue";
 import SectionTitle from "@/components/SectionTitle.vue";
 import TimelineList from "@/components/TimelineList.vue";
 
-const { profile, education, work_experience, projects,certifications } = data;
+const { profile, education, work_experience, projects, certifications } = data;
 </script>
 
 <template>
@@ -20,8 +18,8 @@ const { profile, education, work_experience, projects,certifications } = data;
     <section
         id="hero"
         class="min-h-screen bg-gray-100 px-6 py-7 md:px-10 md:py-28"
-        data-aos="fade-up"
-        data-aos-duration="2000" 
+        data-aos="fade-down"
+        data-aos-duration="2000"
     >
         <div
             class="container mx-auto flex max-w-screen-xl flex-col items-center gap-6 lg:flex-row-reverse lg:items-start lg:gap-14"
@@ -72,15 +70,18 @@ const { profile, education, work_experience, projects,certifications } = data;
         </div>
     </section>
 
-    <section id="about" class="bg-gray-100 px-6 py-7 md:px-10 md:py-12"
+    <section
+        id="about"
+        class="bg-gray-100 px-6 py-7 md:px-10 md:py-12"
+       
     >
         <div
-            class="mx-auto flex max-w-screen-xl flex-col gap-14 md:flex-row lg:gap-20"
+        class="mx-auto flex max-w-screen-xl flex-col gap-14 md:flex-row md:justify-between lg:gap-20"
         >
             <!-- About Me Section -->
-            <div class="flex flex-col items-center md:w-1/2 md:items-start" 
-            data-aos="fade-right"
-            data-aos-duration="2000" >
+            <div class="md:max-w-1/2 flex w-full flex-col gap-14"
+            data-aos="fade-down"
+            data-aos-duration="2000">
                 <SectionTitle
                     class="mb-6 text-center text-3xl font-bold md:text-left"
                     >About Me</SectionTitle
@@ -98,12 +99,11 @@ const { profile, education, work_experience, projects,certifications } = data;
                 </p>
             </div>
             <!-- Technologies Section -->
-            <div class="flex flex-col items-center md:w-1/2 md:items-start"
-            data-aos="fade-left"
-            data-aos-duration="2000" 
-            >
+            <div class="md:max-w-1/2 flex w-full flex-col gap-14"
+             data-aos="fade-up"
+        data-aos-duration="2000">
                 <SectionTitle
-                    class="mb-4 text-center text-2xl font-bold text-gray-800 md:text-left"
+                    class="pb-8"
                     >Technologies I Love Working With</SectionTitle
                 >
                 <ul
@@ -142,20 +142,16 @@ const { profile, education, work_experience, projects,certifications } = data;
     <section
         id="experiance"
         class="bg-primary-light px-6 py-7 md:px-10 md:py-12"
-
-        data-aos="fade-left"
-        data-aos-duration="2000" 
-
     >
         <div
             class="mx-auto flex max-w-screen-xl flex-col gap-14 md:flex-row md:justify-between lg:gap-20"
         >
             <!-- Background -->
-            <div class="md:max-w-1/2 flex w-full flex-col gap-14">
+            <div class="md:max-w-1/2 flex w-full flex-col gap-14"
+            data-aos="fade-down"
+            data-aos-duration="2000">
                 <!-- Education -->
-                <div id="education"
-                data-aos="fade-right"
-                data-aos-duration="2000" >
+                <div id="education" class="w-full">
                     <SectionTitle class="pb-8">Education</SectionTitle>
                     <ProfileCard
                         :icon="education.icon"
@@ -167,27 +163,15 @@ const { profile, education, work_experience, projects,certifications } = data;
                         :column="1"
                     />
                 </div>
-
-                <!-- Skills -->
-                <!-- <div id="technical-skills">
-                    <SectionTitle class="pb-8">Technical Skills</SectionTitle>
-                    <div v-for="(technical_skill, index) in technical_skills" :key="index">
-                        <ProfileCard :icon="technical_skill.icon" :title="technical_skill.category" :sub_title="technical_skill.degree" :description="technical_skill.description" :items="technical_skill.skills" :class="`${index === technical_skills.length - 1 ? '' : 'pb-8'}`" />
-                    </div>
-                </div> -->
                 <!-- Certification Section -->
                 <div class="flex flex-col items-center md:w-1/2 md:items-start">
-                    <!-- <SectionTitle
-                        class="mb-4 text-center text-2xl font-bold text-gray-800 md:text-left"
-                        >Certifications</SectionTitle
-                    > -->
                     <div
                         v-for="(certificate, index) in certifications"
                         :key="index"
                         class="mb-6 text-gray-700"
                     >
                         <ProfileCard
-                        icon="simple-icons:udemy"
+                            icon="simple-icons:udemy"
                             :title="certificate.title"
                             :url="certificate.url"
                             :sub_title="certificate.institution"
@@ -200,25 +184,20 @@ const { profile, education, work_experience, projects,certifications } = data;
             </div>
 
             <!-- Work Experience -->
-            <div id="work-experience" class="md:max-w-1/2 w-full"
-            data-aos="fade-left"
-            data-aos-duration="2000" 
-            >
+            <div id="work-experience" class="md:max-w-1/2 w-full" 
+            data-aos="fade-up"
+            data-aos-duration="2000">
                 <SectionTitle class="pb-8">Work Experience</SectionTitle>
                 <TimelineList :activities="work_experience" />
             </div>
         </div>
     </section>
-
     <!-- Projects -->
     <section
         id="projects"
         class="bg-primary-light px-6 pb-20 pt-7 md:px-10 md:pb-24 md:pt-12"
-        data-aos="fade-up"
-        data-aos-duration="2000" 
-
-
-    >
+        data-aos="zoom-in"
+            data-aos-duration="2000">
         <div class="mx-auto max-w-screen-xl">
             <SectionTitle>Project Showcase</SectionTitle>
             <p class="pt-3 text-gray-700">
@@ -246,8 +225,7 @@ const { profile, education, work_experience, projects,certifications } = data;
     </section>
 
     <!-- CTA -->
-    <section id="contact" class="bg-primary px-6 py-16 md:px-10"
-    >
+    <section id="contact" class="bg-primary px-6 py-16 md:px-10">
         <div
             class="mx-auto flex max-w-screen-xl flex-col items-center justify-center gap-4"
         >
