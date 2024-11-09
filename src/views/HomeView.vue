@@ -9,8 +9,25 @@ import ProjectCard from "@/components/ProjectCard.vue";
 import SecondaryButton from "@/components/SecondaryButton.vue";
 import SectionTitle from "@/components/SectionTitle.vue";
 import TimelineList from "@/components/TimelineList.vue";
-
+import { ref, onMounted } from "vue";
+import QRCode from "qrcode";
 const { profile, education, work_experience, projects, certifications } = data;
+
+// Set up state variables
+const showQRCode = ref(false); // To toggle between profile image and QR code
+const qrCodeDataUrl = ref(""); // Store the QR code image URL
+
+// Generate QR code with profile information
+onMounted(async () => {
+    const qrContent = `mailto:${profile.email}`;
+  qrCodeDataUrl.value = await QRCode.toDataURL(qrContent);
+});
+
+// Toggle function for showing the QR code
+const toggleQRCode = () => {
+  showQRCode.value = !showQRCode.value;
+  
+};
 </script>
 
 <template>
@@ -25,12 +42,21 @@ const { profile, education, work_experience, projects, certifications } = data;
             class="container mx-auto flex max-w-screen-xl flex-col items-center gap-6 lg:flex-row-reverse lg:items-start lg:gap-14"
         >
             <!-- Profile Picture -->
-            <figure class="h-full flex-shrink-0 overflow-hidden md:w-1/3">
-                <img
-                    :src="profile.image"
-                    alt="Profile"
-                    class="h-full w-full rounded-full object-cover shadow-lg"
-                />
+            <figure class="h-full flex-shrink-0 overflow-hidden md:w-1/3 cursor-pointer" @click="toggleQRCode">
+                <transition name="fade" mode="out-in">
+                    <img
+                        v-if="!showQRCode"
+                        :src="profile.image"
+                        alt="Profile"
+                        class="h-full w-full rounded-full object-cover shadow-lg transition-transform duration-500"
+                    />
+                    <img
+                        v-else
+                        :src="qrCodeDataUrl"
+                        alt="QR Code"
+                        class="h-full w-full rounded-lg object-cover shadow-lg transition-transform duration-500"
+                    />
+                </transition>
             </figure>
 
             <!-- Bio -->
@@ -265,5 +291,11 @@ const { profile, education, work_experience, projects, certifications } = data;
     background: url("/public/serez.png"); /* Replace with the path to your image */
     background-repeat: repeat-x;
     background-size: contain;
+}
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+    opacity: 0;
 }
 </style>
