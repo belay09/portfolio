@@ -79,13 +79,13 @@ onMounted(() => {
                         </ExternalLink>
                     </div>
                 </div>
-                <ExternalLink v-if="url" :url="url" class="flex items-center gap-1 font-semibold text-primary border px-2 rounded-2xl hover:bg-primary-content">
+                <!-- <ExternalLink v-if="url" :url="url" class="flex items-center gap-1 font-semibold text-primary border px-2 rounded-2xl hover:bg-primary-content">
                     <span class="mt-1">Explore</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M12.293 2.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L14 5.414V15a1 1 0 11-2 0V5.414l-2.293 2.293a1 1 0 01-1.414-1.414l4-4z" clip-rule="evenodd" />
                         <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h6a1 1 0 110 2H5v5a1 1 0 11-2 0v-6z" clip-rule="evenodd" />
                     </svg>
-                </ExternalLink>
+                </ExternalLink> -->
             </div>
         </div>
     </ExternalLink>
