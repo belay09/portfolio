@@ -12,11 +12,6 @@ const routes = [
         path: "/:pathMatch(.*)*",
         name: "NotFound",
         component: NotFoundView,
-    },
-    {
-        path: "/upload",
-        name: "Upload",
-        component: () => import("@/views/UploadView.vue"),
     }
 ];
 
