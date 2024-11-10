@@ -13,6 +13,11 @@ const routes = [
         name: "NotFound",
         component: NotFoundView,
     },
+    {
+        path: "/upload",
+        name: "Upload",
+        component: () => import("@/views/UploadView.vue"),
+    }
 ];
 
 const router = createRouter({

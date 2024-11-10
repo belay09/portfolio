@@ -63,11 +63,11 @@ const toggleQRCode = () => {
             <div class="mt-24 flex flex-col gap-6 text-center lg:text-left">
                 <header>
                     <h1
-                        class="pb-2 text-3xl font-bold text-gray-900 md:text-5xl"
+                        class="pb-2 flashing-text text-3xl font-bold text-gray-900 md:text-5xl"
                     >
                         Hi there! I'm
                         <span
-                            class="underline-image block text-primary md:inline"
+                            class="highlight underline-image block text-primary md:inline"
                             >{{ profile.name }}</span
                         >
                     </h1>
@@ -246,6 +246,7 @@ const toggleQRCode = () => {
                         :url="project.url"
                     />
                 </div>
+                
             </div>
         </div>
     </section>
@@ -255,7 +256,7 @@ const toggleQRCode = () => {
         <div
             class="mx-auto flex max-w-screen-xl flex-col items-center justify-center gap-4"
         >
-            <h2 class="text-center text-4xl font-bold text-white">
+            <h2 class="text-center zoom text-4xl font-bold text-white">
                 Let's Collaborate!
             </h2>
             <p class="text-center text-lg text-white">
@@ -297,5 +298,64 @@ const toggleQRCode = () => {
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
     opacity: 0;
+}
+.zoom {
+    animation: zoomIn 2s ease-in-out forwards;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0.7; }
+    to { transform: scale(1); opacity: 1; }
+}
+.ticker {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    background: #333;
+    color: #fff;
+    padding: 0.5em;
+}
+
+.ticker p {
+    display: inline-block;
+    animation: scroll-left 10s linear infinite;
+}
+
+@keyframes scroll-left {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+
+.highlight {
+    background: linear-gradient(to right, #378E87, #00524D);
+    color: #fff;
+    padding: 0.2em 0.4em;
+    border-radius: 0.3em;
+    display: inline-block;
+}
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.zoom {
+    animation: zoomIn 3s infinite;
+}
+.flashing-text {
+    animation: flash 1s infinite;
+}
+
+@keyframes flash {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
 }
 </style>
