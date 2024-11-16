@@ -63,11 +63,11 @@ const toggleQRCode = () => {
             <div class="mt-24 flex flex-col gap-6 text-center lg:text-left">
                 <header>
                     <h1
-                        class="pb-2 flashing-text text-3xl font-bold text-gray-900 md:text-5xl"
+                        class="pb-2  text-3xl font-bold text-gray-900 md:text-5xl"
                     >
                         Hi there! I'm
                         <span
-                            class="highlight underline-image block text-primary md:inline"
+                            class=" block text-primary md:inline"
                             >{{ profile.name }}</span
                         >
                     </h1>
