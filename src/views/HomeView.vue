@@ -159,6 +159,18 @@ const toggleQRCode = () => {
                     <li class="rounded-lg bg-white px-4 py-2 shadow-md">
                         PostgreSQL
                     </li>
+                    <li class="rounded-lg bg-white px-4 py-2 shadow-md">
+                        Laravel
+                    </li>
+                    <li class="rounded-lg bg-white px-4 py-2 shadow-md">
+                        React
+                    </li>
+                    <li class="rounded-lg bg-white px-4 py-2 shadow-md">
+                        Laravel
+                    </li>
+                    <li class="rounded-lg bg-white px-4 py-2 shadow-md">
+                        PHP
+                    </li>
                 </ul>
             </div>
         </div>
