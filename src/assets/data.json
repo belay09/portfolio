@@ -99,19 +99,20 @@
             },
             "url": "https://muya.hahu.jobs/en"
           },
+          
           {
-            "title": "Plan International",
-            "description": "Developed a user-friendly website for a childcare franchise model to empower young mothers to start home-based childcare services. Focused on responsive design, intuitive navigation, and interactive features like application forms and scheduling tools. Ensured seamless integration with backend systems and conducted user testing to refine the interface. The project provided mothers with a sustainable business opportunity, increased childcare availability, and supported community needs through a scalable, accessible platform.",
-            "image": "/images/projects/plan.png",
+            "title": "Darius’ Fight for Justice",
+            "description": "This website is dedicated to raising awareness and support for Darius, an 11-year-old boy who has suffered from abuse due to a failing legal system in Poland. It highlights the urgent need for judicial reform to protect vulnerable children. Through compelling storytelling, it sheds light on Darius' struggle and the systemic failures that affect countless children in Poland. The site provides information on how visitors can help, including donating, sharing the story, and supporting legal efforts to take the case to the European Court of Human Rights. Together, we can make a difference.",
+            "image": "/images/projects/dari.png",
             "tools": {
-                "vuejs": "https://vuejs.org/",
-                "graphql": "https://graphql.org/",
+                "laravel": "https://laravel.com/",
+                "tailwindcss": "https://tailwindcss.com/",
+                "css3": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+                "html5": "https://developer.mozilla.org/en-US/docs/Web/HTML"
 
-                "nuxtdotjs": "https://nuxtjs.org/",
-                "tailwindcss": "https://tailwindcss.com/"
             },
-            "url":"https://www.uymp.org/"
-        },
+            "url": "https://dariusbehi.com/"
+          },
           {
             "title": "Sheger Gebeta",
             "description": "Sheger Gebeta is a comprehensive platform designed to connect hospitality businesses, such as hotels, cafes, and restaurants, with customers, similar to Booking.com. I worked on the admin panel to manage places (e.g., hotels, restaurants), create entities, configure settings, and handle billing. The platform allows seamless creation and management of businesses, streamlining administrative tasks while enabling dynamic data updates and customer engagement.",
