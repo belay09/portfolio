@@ -1,7 +1,7 @@
 {
     "profile": {
         "name": "Belay Sirak",
-        "bio": "I am a full-stack developer with 2 years of experience in both frontend and backend development. I have a strong foundation in building dynamic, user-focused web applications and a passion for creating seamless, responsive designs. I’m committed to continuously expanding my technical skills and adapting to new tools and practices to deliver innovative and effective solutions in an ever-evolving field.",
+        "bio": "I am a full-stack developer with more than 3 years of experience in both frontend and backend development. I have a strong foundation in building dynamic, user-focused web applications and a passion for creating seamless, responsive designs. I’m committed to continuously expanding my technical skills and adapting to new tools and practices to deliver innovative and effective solutions in an ever-evolving field.",
         "resume_url": "/belay_cv.pdf",
         "email": "belay1.sirak2.tsige3@gmail.com",
         "url":"https://www.belay-sirak.tsige.com",
@@ -66,7 +66,7 @@
         {
             "icon": "ic:sharp-home-work",
             "title": "Full Stack Developer at Minab IT Solutions",
-            "period": "February 2024 - Present",
+            "period": "February 2022 - Present",
             "jobdesk": [
                 "Developed and maintained the frontend of a song management application using Vue.js and Nuxt.js.",
                 "Integrated backend services with GraphQL using Hasura, and managed REST APIs with Node.js.",
@@ -86,8 +86,23 @@
     ],
     
         "projects": [
+            {
+
+                "title": "Hahu Jobs",
+                "description": "Hahu Jobs is a job search platform that connects job seekers with employers. It offers a user-friendly interface for job seekers to search for jobs, apply, and manage their applications. Employers can post job listings, review applications, and manage their hiring process. I worked on the frontend to create a seamless user experience, optimize performance, and ensure compatibility across devices.",
+                "image": "/images/projects/hahu.png",
+                "tools": {
+                    "vuejs": "https://vuejs.org/",
+                    "tailwindcss": "https://tailwindcss.com/",
+                  "nuxtdotjs": "https://nuxtjs.org/",
+                  "graphql": "https://graphql.org/",
+                  "javascript": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+    
+                },
+                "url": "https://hahu.jobs/"
+              },
           {
-            "title": "Muya",
+            "title": "Hahu Muya",
             "description": "Muya offers a diverse set of technical and soft skills training for students, jobseekers and professionals alike. It offers capacity building programs of different types and levels partnering with a diverse set of development partners.",
             "image": "/images/projects/muya.jpg",
             "tools": {
@@ -125,8 +140,20 @@
 
             },
             "url": "https://staging.admin.shegergebeta.com/"
+          },
+         
+          {
+            "title": "plan International",
+            "description": "Project description. Developed a user-friendly website for a childcare franchise model to empower young mothers to start home-based childcare services. Focused on responsive design, intuitive navigation, and interactive features like application forms and scheduling tools. Ensured seamless integration with backend systems and conducted user testing to refine the interface. The project provided mothers with a sustainable business opportunity, increased childcare availability, and supported community needs through a scalable, accessible platform.",
+            "image": "/images/projects/plan.png",
+            "tools": {
+                "vuejs": "https://vuejs.org/",
+                "tailwindcss": "https://tailwindcss.com/",
+              "nuxtdotjs": "https://nuxtjs.org/",
+              "graphql": "https://graphql.org/",
+              "javascript": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            },
+            "url": "https://www.uymp.org"
           }
         ]
-      
-      
 }
