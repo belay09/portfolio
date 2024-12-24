@@ -1,5 +1,6 @@
 import "./assets/main.css";
 import "./assets/loading.css"; // Import loading spinner styles
+import "@fortawesome/fontawesome-free/css/all.css"; // Import Font Awesome CSS
 
 import { createApp } from "vue";
 import App from "./App.vue";
@@ -13,4 +14,3 @@ app.use(router);
 
 app.mount("#app");
 AOS.init(); // Initialize AOS
-

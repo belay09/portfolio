@@ -106,7 +106,7 @@ const toggleQRCode = () => {
         >
             <!-- About Me Section -->
             <div class="md:max-w-1/2 flex w-full flex-col gap-14"
-            data-aos="fade-down"
+            data-aos="fade-right"
             data-aos-duration="2000">
                 <SectionTitle
                     class="mb-6 text-center text-3xl font-bold md:text-left"
@@ -126,7 +126,7 @@ const toggleQRCode = () => {
             </div>
             <!-- Technologies Section -->
             <div class="md:max-w-1/2 flex w-full flex-col gap-14"
-             data-aos="fade-up"
+             data-aos="fade-left"
         data-aos-duration="2000">
                 <SectionTitle
                     class="pb-8"
@@ -186,7 +186,7 @@ const toggleQRCode = () => {
         >
             <!-- Background -->
             <div class="md:max-w-1/2 flex w-full flex-col gap-14"
-            data-aos="fade-down"
+            data-aos="fade-right"
             data-aos-duration="2000">
                 <!-- Education -->
                 <div id="education" class="w-full">
@@ -223,7 +223,7 @@ const toggleQRCode = () => {
 
             <!-- Work Experience -->
             <div id="work-experience" class="md:max-w-1/2 w-full" 
-            data-aos="fade-up"
+            data-aos="fade-left"
             data-aos-duration="2000">
                 <SectionTitle class="pb-8">Work Experience</SectionTitle>
                 <TimelineList :activities="work_experience" />
@@ -234,7 +234,7 @@ const toggleQRCode = () => {
     <section
         id="projects"
         class="bg-primary-light px-6 pb-20 pt-7 md:px-10 md:pb-24 md:pt-12"
-        data-aos="zoom-in"
+        data-aos="zoom-out"
             data-aos-duration="2000">
         <div class="mx-auto max-w-screen-xl">
             <SectionTitle>Project Showcase</SectionTitle>

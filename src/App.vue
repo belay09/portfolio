@@ -18,7 +18,7 @@ const toggleMenu = () => {
 </script>
 
 <template>
-    <div class="flex min-h-screen flex-col">
+    <div class="flex min-h-screen flex-col overflow-hidden">
         <!-- Header -->
         <header class="h-[calc(100vh - 64px)] sticky top-0 z-50 bg-primary-light px-6 drop-shadow md:px-10" >
             <div class="mx-auto flex max-w-screen-xl flex-col items-center md:flex-row md:justify-between">
@@ -46,7 +46,7 @@ const toggleMenu = () => {
             </div>
         </header>
 
-        <main class="flex-1">
+        <main class="flex-1 ">
             <section class="h-full">
                 <RouterView />
             </section>
