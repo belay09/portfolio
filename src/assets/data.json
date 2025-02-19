@@ -66,7 +66,7 @@
             "title": "Full Stack Developer at Minab IT Solutions",
             "period": "February 2022 - Present",
             "jobdesk": [
-                "Developed and maintained the frontend of a song management application using Vue.js and Nuxt.js.",
+                "Developed and maintained web application using Vue.js and Nuxt.js.",
                 "Integrated backend services with GraphQL using Hasura, and managed REST APIs with Node.js.",
                 "Collaborated in a team to ensure seamless integration between frontend and backend services."
             ]
