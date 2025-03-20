@@ -74,13 +74,16 @@
         },
         {
             "icon": "ic:sharp-home-work",
-            "title": "Frontend Developer at Freelance",
+            "title": "Full Stack Developer at upwork",
             "period": "January 2022 - Present",
             "jobdesk": [
-                "Built and maintained responsive websites for various clients using Vue.js, Tailwind CSS, and Nuxt.js.",
-                "Provided ongoing support and maintenance to ensure websites remain up-to-date and optimized.",
-                "Collaborated with backend developers to integrate APIs into frontend applications."
-            ]
+              "Built and maintained responsive websites for various clients using Vue.js, Tailwind CSS, and Nuxt.js.",
+              "Provided ongoing support and maintenance to ensure websites remain up-to-date and optimized.",
+              "Collaborated with backend developers to integrate APIs into frontend applications.",
+              "Developed and maintained responsive websites for various clients using Vue.js, Tailwind CSS, and Nuxt.js.",
+              "Provided ongoing support and maintenance to ensure websites remain up-to-date and optimized.",
+              "Collaborated with backend developers to integrate APIs into frontend applications."
+          ]
         }
     ],
     
