@@ -26,7 +26,11 @@ const props = defineProps({
 });
 
 const backgroundClasses = computed(() => {
-    return `rounded-full ${props.backgroundColor} ${props.backgroundSize}`;
+    // Add dark: variants for known background colors
+    let bg = props.backgroundColor;
+    if (bg === 'bg-primary-content') bg += ' dark:bg-gray-800';
+    if (bg === 'bg-primary') bg += ' dark:bg-primary-content';
+    return `rounded-full ${bg} ${props.backgroundSize}`;
 });
 </script>
 

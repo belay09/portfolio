@@ -34,7 +34,7 @@ const toggleQRCode = () => {
     <!-- Hero -->
     <section
         id="hero"
-        class="min-h-screen bg-gray-100 px-6 py-7 md:px-10 md:py-28"
+        class="min-h-screen bg-gray-100 dark:bg-gray-900 px-6 py-7 md:px-10 md:py-28"
         data-aos="fade-down"
         data-aos-duration="2000"
     >
@@ -63,16 +63,16 @@ const toggleQRCode = () => {
             <div class="mt-24 flex flex-col gap-6 text-center lg:text-left">
                 <header>
                     <h1
-                        class="pb-2  text-3xl font-bold text-gray-900 md:text-5xl"
+                        class="pb-2  text-3xl font-bold text-gray-900 dark:text-gray-100 md:text-5xl"
                     >
                         Hi there! I'm
                         <span
-                            class=" block text-primary md:inline"
+                            class=" block text-primary md:inline dark:text-primary-content"
                             >{{ profile.name }}</span
                         >
                     </h1>
                 </header>
-                <p class="text-gray-700">
+                <p class="text-gray-700 dark:text-gray-300">
                     {{ profile.bio }}
                 </p>
                 <div
@@ -98,7 +98,7 @@ const toggleQRCode = () => {
 
     <section
         id="about"
-        class="bg-gray-100 px-6 py-7 md:px-10 md:py-12"
+        class="bg-primary-light dark:bg-gray-900 px-6 py-7 md:px-10 md:py-12"
        
     >
         <div
@@ -112,7 +112,7 @@ const toggleQRCode = () => {
                     class="mb-6 text-center text-3xl font-bold md:text-left"
                     >About Me</SectionTitle
                 >
-                <p class="mb-6 text-center text-lg text-gray-700 md:text-left">
+                <p class="mb-6 text-center text-lg text-gray-700 dark:text-gray-300 md:text-left">
                     I’m Belay Sirak, a passionate Full Stack Developer with
                     hands-on experience in building dynamic web applications.
                     Skilled in both frontend and backend technologies, I enjoy
@@ -179,7 +179,7 @@ const toggleQRCode = () => {
     <!-- About -->
     <section
         id="experiance"
-        class="bg-primary-light px-6 py-7 md:px-10 md:py-12"
+        class="bg-primary-light dark:bg-gray-900 px-6 py-7 md:px-10 md:py-12"
     >
         <div
             class="mx-auto flex max-w-screen-xl flex-col gap-14 md:flex-row md:justify-between lg:gap-20"
@@ -206,7 +206,7 @@ const toggleQRCode = () => {
                     <div
                         v-for="(certificate, index) in certifications"
                         :key="index"
-                        class="mb-6 text-gray-700"
+                        class="mb-6 text-gray-700 dark:text-gray-300"
                     >
                         <ProfileCard
                             icon="simple-icons:udemy"
@@ -233,29 +233,27 @@ const toggleQRCode = () => {
     <!-- Projects -->
     <section
         id="projects"
-        class="bg-primary-light px-6 pb-20 pt-7 md:px-10 md:pb-24 md:pt-12"
-        data-aos="zoom-out"
-            data-aos-duration="2000">
+        class="bg-gray-100 dark:bg-gray-900 px-6 pb-20 pt-7 md:px-10 md:pb-24 md:pt-12"
+       >
         <div class="mx-auto max-w-screen-xl">
             <SectionTitle>Project Showcase</SectionTitle>
-            <p class="pt-3 text-gray-700">
+            <p class="pt-3 text-gray-700 dark:text-gray-300">
                 These are projects I've developed, providing effective solutions
                 to diverse problems.
             </p>
 
             <div class="flex flex-col items-center pt-8">
-                <div
-                    class="grid gap-x-7 gap-y-7 pt-3 md:grid-cols-2 lg:grid-cols-3"
-                >
-                    <!-- Project -->
+                <div class="grid gap-x-7 gap-y-7 pt-3 md:grid-cols-2 lg:grid-cols-3">
                     <ProjectCard
-                        v-for="(project, index) in projects"
-                        :key="index"
+                        v-for="project in projects"
+                        :key="project.title"
                         :image="project.image"
                         :tools="project.tools"
                         :title="project.title"
                         :description="project.description"
                         :url="project.url"
+                        data-aos="fade-right"
+                        :data-aos-delay="1000"
                     />
                 </div>
                 
@@ -264,19 +262,19 @@ const toggleQRCode = () => {
     </section>
 
     <!-- CTA -->
-    <section id="contact" class="bg-primary px-6 py-16 md:px-10">
+    <section id="contact" class="bg-primary dark:bg-gray-900 px-6 py-16 md:px-10 dark:border-t border-gray-200 dark:border-gray-800">
         <div
             class="mx-auto flex max-w-screen-xl flex-col items-center justify-center gap-4"
         >
             <h2 class="text-center zoom text-4xl font-bold text-white">
                 Let's Collaborate!
             </h2>
-            <p class="text-center text-lg text-white">
+            <p class="text-center text-lg text-white/90">
                 Ready to discuss projects, ideas, or just connect? Feel free to
                 reach out to me
             </p>
             <ExternalLink :url="`mailto:${profile.email}`" class="mt-4">
-                <SecondaryButton>
+                <SecondaryButton class="bg-white text-primary hover:bg-gray-100 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600">
                     <IconText
                         :icon="'material-symbols:mail'"
                         text="Send email"

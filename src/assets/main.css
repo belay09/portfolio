@@ -21,3 +21,19 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+/* Removed custom utility classes that caused circular dependency errors. Continue to use Tailwind's utility classes and dark: variants directly in your templates. */
+
+@layer base {
+  body {
+    @apply bg-primary-light text-gray-900 transition-colors duration-300;
+  }
+  html.dark body {
+    @apply bg-gray-900 text-gray-100 transition-colors duration-300;
+  }
+  *, *::before, *::after {
+    background-color: inherit;
+    color: inherit;
+    transition: background-color 0.3s, color 0.3s;
+  }
+}

@@ -36,10 +36,10 @@ defineProps({
         <IconWrapper :icon="icon" />
         <div class="flex flex-col gap-2">
             <div class="gap-0ew flex flex-col">
-                <h3 class="text-xl font-semibold text-gray-900">{{ title }}</h3>
-                <span class="text-gray-500">{{ sub_title }}</span>
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">{{ title }}</h3>
+                <span class="text-gray-500 dark:text-gray-300">{{ sub_title }}</span>
             </div>
-            <p class="text-gray-700">{{ description }}</p>
+            <p class="text-gray-700 dark:text-gray-300">{{ description }}</p>
             <div v-if="items?.length > 0">
                 <ItemList
                     :items="items"

@@ -33,10 +33,10 @@ const baseClasses = computed(() => {
 
 <template>
     <div :class="baseClasses">
-        <Icon v-if="icon && iconPosition === 'left'" :icon="icon" class="mr-1.5 mt-0.5 flex-shrink-0" :width="iconSize"
+        <Icon v-if="icon && iconPosition === 'left'" :icon="icon" class="mr-1.5 mt-0.5 flex-shrink-0 text-primary dark:text-primary-content" :width="iconSize"
             :height="iconSize" />
-        <span class="flex-grow">{{ text }}</span>
-        <Icon v-if="icon && iconPosition === 'right'" :icon="icon" class="ml-1.5 mt-0.5 flex-shrink-0" :width="iconSize"
+        <span class="flex-grow dark:text-primary-content">{{ text }}</span>
+        <Icon v-if="icon && iconPosition === 'right'" :icon="icon" class="ml-1.5 mt-0.5 flex-shrink-0 text-primary dark:text-primary-content" :width="iconSize"
             :height="iconSize" />
     </div>
 </template>
