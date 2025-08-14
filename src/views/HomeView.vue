@@ -242,8 +242,9 @@ const toggleQRCode = () => {
                 to diverse problems.
             </p>
 
-            <div class="flex flex-col items-center pt-8">
-                <div class="grid gap-x-7 gap-y-7 pt-3 md:grid-cols-2 lg:grid-cols-3">
+            <div class="flex flex-col items-center pt-8" >
+                <div class="grid gap-x-7 gap-y-7 pt-3 md:grid-cols-2 lg:grid-cols-3"
+                >
                     <ProjectCard
                         v-for="project in projects"
                         :key="project.title"
@@ -252,8 +253,7 @@ const toggleQRCode = () => {
                         :title="project.title"
                         :description="project.description"
                         :url="project.url"
-                        data-aos="fade-right"
-                        :data-aos-delay="1000"
+                        
                     />
                 </div>
                 

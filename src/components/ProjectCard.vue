@@ -45,7 +45,9 @@ onMounted(() => {
 </script>
 
 <template>
-    <ExternalLink v-if="url" :url="url" class="flex h-full flex-col overflow-hidden rounded-lg border border-gray-200 shadow-2xl border transition-shadow duration-300 hover:shadow-xl dark:bg-gray-800 dark:border-gray-700">
+    <ExternalLink v-if="url" :url="url" class="flex h-full flex-col overflow-hidden rounded-lg border border-gray-200 shadow-2xl border transition-shadow duration-300 hover:shadow-xl dark:bg-gray-800 dark:border-gray-700"
+    data-aos="fade-left"
+    :data-aos-delay="500">
         <img
             :src="image"
             loading="lazy"
