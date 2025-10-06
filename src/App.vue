@@ -44,8 +44,8 @@ onMounted(() => {
 
 <template>
     <div class="flex min-h-screen flex-col overflow-hidden">
-        <!-- Dark mode toggle button in top right corner -->
-        <button @click="toggleDark" class="fixed top-4 right-4 z-[100] flex items-center gap-2 rounded px-2 py-1 border border-primary bg-white dark:bg-gray-800 text-primary dark:text-primary-content hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white transition shadow-lg">
+        <!-- Dark mode toggle button in left bottom corner -->
+        <button @click="toggleDark" class="fixed bottom-4 left-4 z-[100] flex items-center gap-2 rounded px-2 py-1 border border-primary bg-white dark:bg-gray-800 text-primary dark:text-primary-content hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white transition shadow-lg">
             <Icon :icon="isDark ? 'mdi:weather-night' : 'mdi:white-balance-sunny'" width="22" height="22" />
             <span class="hidden md:inline">{{ isDark ? 'Dark' : 'Light' }} Mode</span>
         </button>
