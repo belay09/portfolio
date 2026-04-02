@@ -68,7 +68,7 @@ onMounted(() => {
                     <!-- Logo -->
                     <RouterLink :to="{ path: '/' }" class="group inline-flex items-center gap-2.5">
                         <span class="text-2xl font-black tracking-tight text-slate-900 dark:text-slate-100 md:text-3xl">
-                            Belay<span class="bg-gradient-to-r from-cyan-300 to-violet-300 bg-clip-text text-transparent dark:from-cyan-300 dark:to-violet-300">Sirak</span>
+                            Belay<span class="bg-gradient-to-r from-cyan-300 to-violet-300 bg-clip-text text-transparent dark:from-cyan-300 dark:to-violet-300"> Sirak</span>
                         </span>
                         <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-cyan-400 to-violet-500 text-base text-white shadow-md shadow-cyan-500/30 transition-transform duration-300 group-hover:rotate-12">
                             ⚡
