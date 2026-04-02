@@ -45,29 +45,29 @@ onMounted(() => {
 </script>
 
 <template>
-    <ExternalLink v-if="url" :url="url" class="flex h-full flex-col overflow-hidden rounded-lg border border-gray-200 shadow-2xl border transition-shadow duration-300 hover:shadow-xl dark:bg-gray-800 dark:border-gray-700"
+    <ExternalLink v-if="url" :url="url" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-white/60 bg-white/85 shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl dark:border-slate-600/80 dark:bg-slate-900/95"
     data-aos="fade-left"
-    :data-aos-delay="500">
+    :data-aos-delay="200">
         <img
             :src="image"
             loading="lazy"
             :alt="title"
             @error="handleImageError"
             v-if="!showFallback"
-            class="aspect-video object-contain object-top transition duration-200"
+            class="aspect-video object-cover object-top transition duration-500 group-hover:scale-[1.02]"
         />
         <FallbackImage v-if="showFallback" :title="title" />
 
-        <div class="flex flex-grow flex-col justify-between gap-1 bg-white px-7 py-5 dark:bg-gray-800">
-            <div class="mb-10 flex-grow">
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">{{ title }}</h3>
-                <p ref="descriptionRef" class="tooltip line-clamp-4 pt-4 text-gray-600 dark:text-gray-300" v-tooltip>{{ description }}</p>
+        <div class="flex flex-grow flex-col justify-between gap-4 px-6 py-5">
+            <div class="flex-grow">
+                <h3 class="text-xl font-semibold text-slate-900 dark:text-slate-100">{{ title }}</h3>
+                <p ref="descriptionRef" class="tooltip line-clamp-4 pt-3 text-[0.98rem] leading-7 text-slate-600 dark:text-slate-200" v-tooltip>{{ description }}</p>
             </div>
-            <div class="flex items-center justify-between">
-                <div class="flex gap-2">
+            <div class="flex items-center justify-between border-t border-slate-200/70 pt-4 dark:border-slate-600/80">
+                <div class="flex flex-wrap gap-2">
                     <div v-for="(url, tool) in tools" :key="tool">
                         <ExternalLink :url="url">
-                            <div v-if="tool === 'vuejs'" class="mx-auto flex rounded-full border bg-blue-100 p-2 dark:border-gray-700 dark:bg-gray-700">
+                            <div v-if="tool === 'vuejs'" class="mx-auto flex rounded-full border border-teal-200 bg-teal-50 p-2 dark:border-teal-900 dark:bg-slate-800">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 16 16">
                                     <g fill="none" stroke="#0ff51e" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M1 1.5h5.44L8 4.56L9.56 1.5H15l-6.99 13z" />
@@ -125,14 +125,19 @@ export default {
     bottom: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #333;
-    color: #fff;
-    padding: 0.5rem;
+  background-color: rgba(15, 23, 42, 0.92);
+  color: #f8fafc;
+  padding: 0.5rem 0.65rem;
     border-radius: 0.25rem;
-    white-space: nowrap;
+  white-space: normal;
+  width: 260px;
+  text-align: center;
+  font-size: 0.82rem;
+  line-height: 1.35;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.2s;
+  z-index: 20;
 }
 
 .tooltip:hover::after {

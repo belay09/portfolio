@@ -1,7 +1,7 @@
 {
     "profile": {
         "name": "Belay Sirak",
-        "bio": "I am a full-stack developer with more than 3 years of experience in both frontend and backend development. I have a strong foundation in building dynamic, user-focused web applications and a passion for creating seamless, responsive designs. I’m committed to continuously expanding my technical skills and adapting to new tools and practices to deliver innovative and effective solutions in an ever-evolving field.",
+        "bio": "With 5+ years of full-stack development experience, I am recognized as 🌟 Top Rated Plus on Upwork (Top 3%), with ✅ 100% Job Success. I focus on quality, reliability, and long-term client relationships 🤝 through scalable, user-focused solutions.",
         "resume_url": "/belay_cv.pdf",
         "email": "belay1.sirak2.tsige3@gmail.com",
         "url":"https://www.belay-sirak.tsige.com",
@@ -86,7 +86,7 @@
           ]
         }
     ],
-    
+
         "projects": [
             {
 
@@ -99,7 +99,7 @@
                   "nuxtdotjs": "https://nuxtjs.org/",
                   "graphql": "https://graphql.org/",
                   "javascript": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-    
+
                 },
                 "url": "https://hahu.jobs/"
               },
@@ -116,7 +116,7 @@
             },
             "url": "https://muya.hahu.jobs"
           },
-          
+
           {
             "title": "Darius’ Fight for Justice",
             "description": "This website is dedicated to raising awareness and support for Darius, an 11-year-old boy who has suffered from abuse due to a failing legal system in Poland. It highlights the urgent need for judicial reform to protect vulnerable children. Through compelling storytelling, it sheds light on Darius' struggle and the systemic failures that affect countless children in Poland. The site provides information on how visitors can help, including donating, sharing the story, and supporting legal efforts to take the case to the European Court of Human Rights. Together, we can make a difference.",
@@ -143,7 +143,7 @@
             },
             "url": "https://staging.admin.shegergebeta.com/"
           },
-         
+
           {
             "title": "plan International",
             "description": "Project description. Developed a user-friendly website for a childcare franchise model to empower young mothers to start home-based childcare services. Focused on responsive design, intuitive navigation, and interactive features like application forms and scheduling tools. Ensured seamless integration with backend systems and conducted user testing to refine the interface. The project provided mothers with a sustainable business opportunity, increased childcare availability, and supported community needs through a scalable, accessible platform.",

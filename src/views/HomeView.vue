@@ -34,7 +34,7 @@ const toggleQRCode = () => {
     <!-- Hero -->
     <section
         id="hero"
-        class="min-h-screen bg-gray-100 dark:bg-gray-900 px-6 py-7 md:px-10 md:py-28"
+        class="min-h-screen bg-gray-100/72 dark:bg-gray-950/84 backdrop-blur-[1px] px-6 py-7 md:px-10 md:py-28"
         data-aos="fade-down"
         data-aos-duration="2000"
     >
@@ -72,9 +72,14 @@ const toggleQRCode = () => {
                         >
                     </h1>
                 </header>
-                <p class="text-gray-700 dark:text-gray-300">
+                <p class="section-paragraph text-center lg:text-left text-base leading-8 text-slate-700 dark:text-slate-200">
                     {{ profile.bio }}
                 </p>
+                <div class="flex flex-wrap items-center justify-center gap-2 lg:justify-start">
+                    <span class="rounded-full bg-violet-100 px-3 py-1 text-xs font-semibold text-violet-700 dark:bg-violet-500/20 dark:text-violet-200">🏅 Top Rated Plus</span>
+                    <span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-200">✅ 100% Job Success</span>
+                    <span class="rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold text-sky-700 dark:bg-sky-500/20 dark:text-sky-200">🚀 Top 3% Talent</span>
+                </div>
                 <div
                     class="flex items-center justify-center gap-6 lg:justify-start"
                 >
@@ -98,7 +103,7 @@ const toggleQRCode = () => {
 
     <section
         id="about"
-        class="bg-primary-light dark:bg-gray-900 px-6 py-7 md:px-10 md:py-12"
+        class="bg-primary-light/72 dark:bg-gray-950/84 backdrop-blur-[1px] px-6 py-7 md:px-10 md:py-12"
        
     >
         <div
@@ -110,18 +115,19 @@ const toggleQRCode = () => {
             data-aos-duration="2000">
                 <SectionTitle
                     class="mb-6 text-center text-3xl font-bold md:text-left"
-                    >About Me</SectionTitle
+                    >✨ About Me</SectionTitle
                 >
-                <p class="mb-6 text-center text-lg text-gray-700 dark:text-gray-300 md:text-left">
-                    I’m Belay Sirak, a passionate Full Stack Developer with
-                    hands-on experience in building dynamic web applications.
-                    Skilled in both frontend and backend technologies, I enjoy
-                    creating seamless user experiences and writing efficient,
-                    scalable code. With a background in Vue.js, Nuxt.js,
-                    Tailwind CSS, Hasura, Node.js, and Golang, I’m committed to
-                    bringing innovative ideas to life and collaborating with
-                    like-minded professionals to solve complex challenges. Let’s
-                    build something amazing together!
+                <p class="section-paragraph mb-6 text-center md:text-left text-slate-700 dark:text-slate-200">
+                    💼 I help businesses turn ideas into modern web products
+                    with tailored solutions, responsive user experiences, and
+                    efficient backend systems. My approach combines clean code,
+                    clear communication, and on-time delivery ⏱️, with ongoing
+                    support 🔧 to keep projects fast, secure, and maintainable.
+                    I am passionate about future-proof solutions and long-term
+                    collaborations that create real business impact.
+                </p>
+                <p class="section-paragraph text-center md:text-left text-slate-700 dark:text-slate-200">
+                    ✅ 100% Job Success &nbsp; • &nbsp; 🌟 Top Rated Plus &nbsp; • &nbsp; 🚀 Top 3% Talent
                 </p>
             </div>
             <!-- Technologies Section -->
@@ -130,46 +136,55 @@ const toggleQRCode = () => {
         data-aos-duration="2000">
                 <SectionTitle
                     class="pb-8"
-                    >Technologies I Love Working With</SectionTitle
+                    >💻 Technologies I Love Working With</SectionTitle
                 >
                 <ul
                     class="flex flex-wrap justify-center gap-4 text-lg text-gray-600 md:justify-start"
                 >
-                    <li class="rounded-lg bg-white px-4 py-2 shadow-md">
+                    <li class="rounded-lg bg-white px-4 py-2 shadow-md dark:bg-slate-800 dark:text-slate-100">
                         Vue.js
                     </li>
-                    <li class="rounded-lg bg-white px-4 py-2 shadow-md">
+                    <li class="rounded-lg bg-white px-4 py-2 shadow-md dark:bg-slate-800 dark:text-slate-100">
                         Nuxt.js
                     </li>
-                    <li class="rounded-lg bg-white px-4 py-2 shadow-md">
+                    <li class="rounded-lg bg-white px-4 py-2 shadow-md dark:bg-slate-800 dark:text-slate-100">
                         Tailwind CSS
                     </li>
-                    <li class="rounded-lg bg-white px-4 py-2 shadow-md">
+                    <li class="rounded-lg bg-white px-4 py-2 shadow-md dark:bg-slate-800 dark:text-slate-100">
+                        TypeScript
+                    </li>
+                    <li class="rounded-lg bg-white px-4 py-2 shadow-md dark:bg-slate-800 dark:text-slate-100">
+                        JavaScript
+                    </li>
+                    <li class="rounded-lg bg-white px-4 py-2 shadow-md dark:bg-slate-800 dark:text-slate-100">
+                        Laravel
+                    </li>
+                    <li class="rounded-lg bg-white px-4 py-2 shadow-md dark:bg-slate-800 dark:text-slate-100">
+                        PHP
+                    </li>
+                    <li class="rounded-lg bg-white px-4 py-2 shadow-md dark:bg-slate-800 dark:text-slate-100">
                         Node.js
                     </li>
-                    <li class="rounded-lg bg-white px-4 py-2 shadow-md">
-                        Golang
+                    <li class="rounded-lg bg-white px-4 py-2 shadow-md dark:bg-slate-800 dark:text-slate-100">
+                        ExpressJS
                     </li>
-                    <li class="rounded-lg bg-white px-4 py-2 shadow-md">
-                        Hasura
-                    </li>
-                    <li class="rounded-lg bg-white px-4 py-2 shadow-md">
+                    <li class="rounded-lg bg-white px-4 py-2 shadow-md dark:bg-slate-800 dark:text-slate-100">
                         GraphQL
                     </li>
-                    <li class="rounded-lg bg-white px-4 py-2 shadow-md">
+                    <li class="rounded-lg bg-white px-4 py-2 shadow-md dark:bg-slate-800 dark:text-slate-100">
                         PostgreSQL
                     </li>
-                    <li class="rounded-lg bg-white px-4 py-2 shadow-md">
-                        Laravel
+                    <li class="rounded-lg bg-white px-4 py-2 shadow-md dark:bg-slate-800 dark:text-slate-100">
+                        MySQL
                     </li>
-                    <li class="rounded-lg bg-white px-4 py-2 shadow-md">
-                        React
+                    <li class="rounded-lg bg-white px-4 py-2 shadow-md dark:bg-slate-800 dark:text-slate-100">
+                        MongoDB
                     </li>
-                    <li class="rounded-lg bg-white px-4 py-2 shadow-md">
-                        Laravel
+                    <li class="rounded-lg bg-white px-4 py-2 shadow-md dark:bg-slate-800 dark:text-slate-100">
+                        Git
                     </li>
-                    <li class="rounded-lg bg-white px-4 py-2 shadow-md">
-                        PHP
+                    <li class="rounded-lg bg-white px-4 py-2 shadow-md dark:bg-slate-800 dark:text-slate-100">
+                        ApexCharts
                     </li>
                 </ul>
             </div>
@@ -179,7 +194,7 @@ const toggleQRCode = () => {
     <!-- About -->
     <section
         id="experiance"
-        class="bg-primary-light dark:bg-gray-900 px-6 py-7 md:px-10 md:py-12"
+        class="bg-primary-light/72 dark:bg-gray-950/84 backdrop-blur-[1px] px-6 py-7 md:px-10 md:py-12"
     >
         <div
             class="mx-auto flex max-w-screen-xl flex-col gap-14 md:flex-row md:justify-between lg:gap-20"
@@ -233,11 +248,11 @@ const toggleQRCode = () => {
     <!-- Projects -->
     <section
         id="projects"
-        class="bg-gray-100 dark:bg-gray-900 px-6 pb-20 pt-7 md:px-10 md:pb-24 md:pt-12"
+        class="bg-gray-100/72 dark:bg-gray-950/84 backdrop-blur-[1px] px-6 pb-20 pt-7 md:px-10 md:pb-24 md:pt-12"
        >
         <div class="mx-auto max-w-screen-xl">
             <SectionTitle>Project Showcase</SectionTitle>
-            <p class="pt-3 text-gray-700 dark:text-gray-300">
+            <p class="section-paragraph pt-3 text-slate-700 dark:text-slate-200">
                 These are projects I've developed, providing effective solutions
                 to diverse problems.
             </p>
@@ -262,18 +277,20 @@ const toggleQRCode = () => {
     </section>
 
     <!-- CTA -->
-    <section id="contact" class="bg-primary dark:bg-gray-900 px-6 py-16 md:px-10 dark:border-t border-gray-200 dark:border-gray-800">
+    <section id="contact" class="bg-primary/88 dark:bg-gray-900/88 backdrop-blur-sm px-6 py-16 md:px-10">
         <div
-            class="mx-auto flex max-w-screen-xl flex-col items-center justify-center gap-4"
+            class="mx-auto flex max-w-screen-xl flex-col items-center justify-center"
         >
-            <h2 class="text-center zoom text-4xl font-bold text-white">
+            <div class="w-full max-w-3xl rounded-2xl bg-white/55 dark:bg-slate-900/45 px-6 py-10 text-center shadow-lg backdrop-blur-md md:px-10">
+            <h2 class="text-center zoom text-4xl font-bold text-slate-900 dark:text-white drop-shadow-sm">
                 Let's Collaborate!
             </h2>
-            <p class="text-center text-lg text-white/90">
+            <p class="section-paragraph mt-2 text-center font-medium text-slate-700 dark:text-slate-100">
                 Ready to discuss projects, ideas, or just connect? Feel free to
                 reach out to me
             </p>
-            <ExternalLink :url="`mailto:${profile.email}`" class="mt-4">
+            <div class="mt-5 flex justify-center">
+            <ExternalLink :url="`mailto:${profile.email}`">
                 <SecondaryButton class="bg-white text-primary hover:bg-gray-100 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600">
                     <IconText
                         :icon="'material-symbols:mail'"
@@ -282,6 +299,8 @@ const toggleQRCode = () => {
                     />
                 </SecondaryButton>
             </ExternalLink>
+            </div>
+            </div>
         </div>
     </section>
 </template>
@@ -367,5 +386,20 @@ const toggleQRCode = () => {
 @keyframes flash {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.5; }
+}
+
+.section-paragraph {
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+.section-paragraph-inverse {
+    color: rgba(255, 255, 255, 0.92);
+}
+
+@media (min-width: 768px) {
+    .section-paragraph {
+        font-size: 1.06rem;
+    }
 }
 </style>

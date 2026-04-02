@@ -43,34 +43,51 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="flex min-h-screen flex-col overflow-hidden">
+    <div class="relative flex min-h-screen flex-col overflow-hidden">
+        <div class="animated-background" aria-hidden="true">
+            <span class="animated-shimmer"></span>
+            <span class="animated-orb orb-one"></span>
+            <span class="animated-orb orb-two"></span>
+            <span class="animated-orb orb-three"></span>
+            <span class="animated-particle particle-one"></span>
+            <span class="animated-particle particle-two"></span>
+            <span class="animated-particle particle-three"></span>
+            <span class="animated-particle particle-four"></span>
+            <span class="animated-particle particle-five"></span>
+        </div>
+        <div class="relative z-[90] flex min-h-screen flex-col">
         <!-- Dark mode toggle button in left bottom corner -->
         <button @click="toggleDark" class="fixed bottom-4 left-4 z-[100] flex items-center gap-2 rounded px-2 py-1 border border-primary bg-white dark:bg-gray-800 text-primary dark:text-primary-content hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white transition shadow-lg">
             <Icon :icon="isDark ? 'mdi:weather-night' : 'mdi:white-balance-sunny'" width="22" height="22" />
             <span class="hidden md:inline">{{ isDark ? 'Dark' : 'Light' }} Mode</span>
         </button>
         <!-- Header -->
-        <header class="h-[calc(100vh - 64px)] sticky top-0 z-50 bg-primary-light dark:bg-gray-900 px-6 drop-shadow md:px-10" >
-            <div class="mx-auto flex max-w-screen-xl flex-col items-center md:flex-row md:justify-between">
+        <header class="sticky top-0 z-50 bg-primary-light/85 dark:bg-slate-900/70 backdrop-blur-md px-6 drop-shadow md:px-10" >
+            <div class="mx-auto flex max-w-screen-xl flex-col items-center py-2 md:flex-row md:justify-between">
                 <div class="flex w-full items-center justify-between md:w-auto">
                     <!-- Logo -->
-                    <RouterLink :to="{ path: '/' }" class="text-lg font-semibold text-gray-900 dark:text-gray-100 md:text-xl">
-                        <img src="/public/images/lo.png" alt="Profile" class="w-full h-14 -ml-6" />
+                    <RouterLink :to="{ path: '/' }" class="group inline-flex items-center gap-2.5">
+                        <span class="text-2xl font-black tracking-tight text-slate-900 dark:text-slate-100 md:text-3xl">
+                            Belay<span class="bg-gradient-to-r from-cyan-300 to-violet-300 bg-clip-text text-transparent dark:from-cyan-300 dark:to-violet-300">Sirak</span>
+                        </span>
+                        <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-cyan-400 to-violet-500 text-base text-white shadow-md shadow-cyan-500/30 transition-transform duration-300 group-hover:rotate-12">
+                            ⚡
+                        </span>
                     </RouterLink>
 
                     <!-- Hamburger Menu -->
                     <button @click="toggleMenu" class="block md:hidden">
                         <span class="sr-only">Toggle Menu</span>
-                        <Icon icon="pajamas:hamburger" width="24" height="24" class="text-primary dark:text-primary-content" />
+                        <Icon icon="pajamas:hamburger" width="24" height="24" class="text-primary dark:text-slate-100" />
                     </button>
                 </div>
                 <!-- Navigation -->
                 <nav :class="{ hidden: !showMenu }" class="flex flex-col gap-4 pt-6 text-center md:flex md:flex-row md:gap-10 md:pt-0">
-                    <NavLink :to="{ path: '/' }" class="text-gray-900 dark:text-gray-100">Home</NavLink>
-                    <NavLink :to="{ path: '/', hash: '#about' }" class="text-gray-900 dark:text-gray-100">About</NavLink>
-                    <NavLink :to="{ path: '/', hash: '#experiance' }" class="text-gray-900 dark:text-gray-100">Experience</NavLink>
-                    <NavLink :to="{ path: '/', hash: '#projects' }" class="text-gray-900 dark:text-gray-100">Projects</NavLink>
-                    <NavLink :to="{ path: '/', hash: '#contact' }" class="text-gray-900 dark:text-gray-100">Contact</NavLink>
+                    <NavLink :to="{ path: '/' }" class="text-gray-900 dark:text-slate-100">Home</NavLink>
+                    <NavLink :to="{ path: '/', hash: '#about' }" class="text-gray-900 dark:text-slate-100">About</NavLink>
+                    <NavLink :to="{ path: '/', hash: '#experiance' }" class="text-gray-900 dark:text-slate-100">Experience</NavLink>
+                    <NavLink :to="{ path: '/', hash: '#projects' }" class="text-gray-900 dark:text-slate-100">Projects</NavLink>
+                    <NavLink :to="{ path: '/', hash: '#contact' }" class="text-gray-900 dark:text-slate-100">Contact</NavLink>
                 </nav>
             </div>
         </header>
@@ -92,8 +109,11 @@ onMounted(() => {
             </div>
         </div>
         <!-- Footer -->
-        <footer class="w-full bg-primary dark:bg-gray-900 text-center py-4 mt-auto text-gray-200 dark:text-gray-300  ">
-            © {{ new Date().getFullYear() }} Belay Sirak. All rights reserved.
+        <footer class="footer-shell w-full py-4 mt-auto">
+            <div class="mx-auto w-fit rounded-full border border-white/45 bg-white/45 px-5 py-1.5 text-sm font-medium text-slate-700 shadow-sm backdrop-blur-md dark:border-slate-700/60 dark:bg-slate-900/45 dark:text-slate-200">
+                © {{ new Date().getFullYear() }} Belay Sirak. All rights reserved.
+            </div>
         </footer>
+        </div>
     </div>
 </template>
