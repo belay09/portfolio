@@ -13,4 +13,10 @@ const app = createApp(App);
 app.use(router);
 
 app.mount("#app");
-AOS.init(); // Initialize AOS
+AOS.init({
+  duration: 650,
+  easing: "ease-out-cubic",
+  once: true,
+  offset: 80,
+  delay: 0,
+}); // Initialize AOS

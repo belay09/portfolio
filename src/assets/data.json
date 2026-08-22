@@ -6,6 +6,7 @@
         "email": "belay1.sirak2.tsige3@gmail.com",
         "url":"https://www.belay-sirak.tsige.com",
         "image": "/images/pro.jpg",
+        "upwork_url": "https://www.upwork.com/freelancers/~01c8eff5783c50d188",
         "accounts": {
             "github": "https://github.com/belay09",
             "stackoverflow": "https://stackoverflow.com/users/21567395/belay-sirak?tab=profile"
@@ -156,5 +157,21 @@
             },
             "url": "https://www.uymp.org"
           }
-        ]
+        ],
+    "reviews": [
+        {
+            "title": "Front-End Web Developer for Website Enhancement",
+            "rating": 5,
+            "period": "Nov 11, 2024 - Nov 20, 2024",
+            "quote": "Belay created a beautiful, user-friendly website using Laravel and Tailwind, with seamless CMS integration. Their expertise in modern web technologies and attention to detail made the project effortless. A pleasure to work with highly recommended.",
+            "tags": ["Clear Communicator", "Collaborative", "Detail Oriented"]
+        },
+        {
+            "title": "Full Stack Developer",
+            "rating": 5,
+            "period": "Jan 1, 2025 - Present",
+            "quote": "He is professional, punctual, and highly skilled. I would gladly recommend him to anyone looking for an honest and dedicated developer.",
+            "tags": ["Professional", "Punctual", "Highly Skilled"]
+        }
+    ]
 }

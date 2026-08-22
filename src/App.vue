@@ -100,7 +100,7 @@ onMounted(() => {
 
         <!-- Social Media -->
         <div class="fixed bottom-4 bg-transparent right-0 flex flex-col gap-4 md:gap-6" data-aos="fade-up"
-        data-aos-duration="3000">
+        data-aos-duration="700">
             <div v-for="(url, platform) in profile.accounts" :key="platform">
                 <ExternalLink :url="url">
                     <span class="sr-only">{{ platform }}</span>
