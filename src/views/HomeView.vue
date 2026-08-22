@@ -76,9 +76,9 @@ const toggleQRCode = () => {
                     {{ profile.bio }}
                 </p>
                 <div class="flex flex-wrap items-center justify-center gap-2 lg:justify-start">
-                    <span class="rounded-full bg-violet-100 px-3 py-1 text-xs font-semibold text-violet-700 dark:bg-violet-500/20 dark:text-violet-200">🏅 Top Rated Plus</span>
-                    <span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-200">✅ 100% Job Success</span>
-                    <span class="rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold text-sky-700 dark:bg-sky-500/20 dark:text-sky-200">🚀 Top 3% Talent</span>
+                    <span class="rounded-full bg-primary/15 px-3 py-1 text-xs font-semibold text-primary dark:bg-primary/20 dark:text-primary-content">🏅 Top Rated Plus</span>
+                    <span class="rounded-full bg-primary/15 px-3 py-1 text-xs font-semibold text-primary dark:bg-primary/20 dark:text-primary-content">✅ 100% Job Success</span>
+                    <span class="rounded-full bg-primary/15 px-3 py-1 text-xs font-semibold text-primary dark:bg-primary/20 dark:text-primary-content">🚀 Top 3% Talent</span>
                 </div>
                 <div
                     class="flex items-center justify-center gap-6 lg:justify-start"
@@ -103,10 +103,13 @@ const toggleQRCode = () => {
         <!-- Client Feedback -->
         <div
             v-if="reviews?.length"
-            class="mx-auto mt-12 max-w-screen-xl rounded-3xl bg-white/45 px-5 py-8 shadow-sm backdrop-blur-md dark:bg-slate-900/40 md:px-8"
+            class="feedback-panel relative mx-auto mt-12 max-w-screen-xl overflow-hidden rounded-3xl  px-5 py-8 shadow-sm backdrop-blur-md md:px-8"
         >
-            <div class="mb-7 flex flex-col items-center gap-3 text-center md:items-start md:text-left">
-                <span class="inline-flex items-center gap-2 rounded-full bg-primary/15 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-primary dark:bg-cyan-400/15 dark:text-cyan-300">
+            <span class="feedback-orb feedback-orb-one" aria-hidden="true"></span>
+            <span class="feedback-orb feedback-orb-two" aria-hidden="true"></span>
+
+            <div class="relative z-10 mb-7 flex flex-col items-center gap-3 text-center md:items-start md:text-left">
+                <span class="feedback-badge inline-flex items-center gap-2 rounded-full bg-primary/15 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-primary dark:bg-primary/20 dark:text-primary-content">
                     💬 Client Feedback from Upwork
                 </span>
                 <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100 md:text-3xl">
@@ -115,27 +118,50 @@ const toggleQRCode = () => {
                 <p class="max-w-2xl text-sm text-slate-600 dark:text-slate-300 md:text-base">
                     These are verified client reviews from my Upwork profile. You can open my profile anytime to see the full feedback history.
                 </p>
-
+                <ExternalLink
+                    v-if="profile.upwork_url"
+                    :url="profile.upwork_url"
+                    class="upwork-cta relative inline-flex overflow-hidden rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-md transition hover:bg-primary-dark"
+                >
+                    View these reviews on my Upwork profile →
+                </ExternalLink>
             </div>
 
-            <div class="grid gap-5 md:grid-cols-2 md:gap-6">
+            <!-- <div class="relative z-10 mb-6 overflow-hidden rounded-full bg-primary/10 py-2 dark:bg-primary/15">
+                <div class="feedback-marquee flex w-max gap-3 whitespace-nowrap px-3 text-xs font-semibold text-primary dark:text-primary-content">
+                    <span v-for="n in 2" :key="n" class="flex gap-3">
+                        <span>⭐ 5.0 Client Rating</span>
+                        <span>•</span>
+                        <span>✅ Verified Upwork Reviews</span>
+                        <span>•</span>
+                        <span>🏅 Top Rated Plus</span>
+                        <span>•</span>
+                        <span>💯 100% Job Success</span>
+                        <span>•</span>
+                        <span>🤝 Trusted by Clients</span>
+                        <span>•</span>
+                    </span>
+                </div>
+            </div> -->
+
+            <div class="relative z-10 grid gap-5 md:grid-cols-2 md:gap-6">
                 <article
                     v-for="(review, index) in reviews"
                     :key="review.title"
-                    class="relative overflow-hidden rounded-2xl bg-white/90 p-6 text-left shadow-lg backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-slate-950/70"
-                    :class="index === 1 ? 'md:translate-y-4' : ''"
+                    class="feedback-card relative overflow-hidden rounded-2xl bg-white/90 p-6 text-left shadow-lg backdrop-blur-md dark:bg-slate-950/70"
+                    :class="index === 1 ? 'feedback-card-delay' : ''"
                 >
-                    <div class="absolute left-0 top-0 h-full w-1.5 bg-gradient-to-b from-cyan-400 to-violet-500"></div>
-                    <div class="absolute right-4 top-2 text-6xl font-serif leading-none text-cyan-400/20 dark:text-cyan-300/15">
+                    <div class="absolute left-0 top-0 h-full w-1.5 bg-gradient-to-b from-primary to-primary-dark"></div>
+                    <div class="feedback-quote absolute right-4 top-2 text-6xl font-serif leading-none text-primary/25 dark:text-primary-content/25">
                         “
                     </div>
 
-                    <div class="mb-3 inline-flex items-center gap-2 rounded-full bg-[#14a800]/15 px-3 py-1 text-xs font-semibold text-[#108a00] dark:bg-[#14a800]/20 dark:text-emerald-300">
+                    <div class="verified-chip mb-3 inline-flex items-center gap-2 rounded-full bg-primary/15 px-3 py-1 text-xs font-semibold text-primary dark:bg-primary/20 dark:text-primary-content">
                         ✅ Verified on Upwork
                     </div>
 
                     <div class="mb-2 flex flex-wrap items-center gap-2 text-sm">
-                        <span class="font-semibold text-amber-500">★★★★★</span>
+                        <span class="star-twinkle font-semibold text-primary">★★★★★</span>
                         <span class="font-semibold text-slate-800 dark:text-slate-100">{{ review.rating.toFixed(1) }}</span>
                         <span class="text-slate-400">|</span>
                         <span class="text-slate-500 dark:text-slate-300">{{ review.period }}</span>
@@ -152,7 +178,7 @@ const toggleQRCode = () => {
                         <span
                             v-for="tag in review.tags"
                             :key="tag"
-                            class="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700 dark:bg-slate-800 dark:text-slate-200"
+                            class="rounded-full bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary transition hover:scale-105 dark:bg-primary/20 dark:text-primary-content"
                         >
                             {{ tag }}
                         </span>
@@ -160,11 +186,11 @@ const toggleQRCode = () => {
                 </article>
             </div>
 
-            <div class="mt-7 flex justify-center md:justify-start">
+            <div class="relative z-10 mt-7 flex justify-center md:justify-start">
                 <ExternalLink
                     v-if="profile.upwork_url"
                     :url="profile.upwork_url"
-                    class="text-sm font-semibold text-[#14a800] underline-offset-4 underline dark:text-emerald-300"
+                    class="text-sm font-semibold text-primary underline underline-offset-4 dark:text-primary-content"
                 >
                     See more client feedback on Upwork
                 </ExternalLink>
@@ -471,6 +497,127 @@ const toggleQRCode = () => {
 @media (min-width: 768px) {
     .section-paragraph {
         font-size: 1.06rem;
+    }
+}
+
+.feedback-orb {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(40px);
+    opacity: 0.35;
+    pointer-events: none;
+    animation: feedback-float 8s ease-in-out infinite;
+}
+
+.feedback-orb-one {
+    width: 10rem;
+    height: 10rem;
+    top: -2rem;
+    right: 10%;
+    background: radial-gradient(circle, rgba(55, 142, 135, 0.45), transparent 70%);
+}
+
+.feedback-orb-two {
+    width: 8rem;
+    height: 8rem;
+    bottom: 1rem;
+    left: 8%;
+    background: radial-gradient(circle, rgba(0, 82, 77, 0.35), transparent 70%);
+    animation-delay: -3s;
+}
+
+.feedback-badge {
+    animation: soft-pulse 2.8s ease-in-out infinite;
+}
+
+.feedback-marquee {
+    animation: marquee-scroll 18s linear infinite;
+}
+
+.feedback-card {
+    animation: card-float 5.5s ease-in-out infinite;
+}
+
+.feedback-card-delay {
+    animation: card-float-offset 5.5s ease-in-out infinite;
+    animation-delay: -2.5s;
+}
+
+.feedback-quote {
+    animation: quote-bob 3.5s ease-in-out infinite;
+}
+
+.verified-chip {
+    animation: soft-pulse 2.4s ease-in-out infinite;
+}
+
+.star-twinkle {
+    animation: star-glow 2s ease-in-out infinite;
+}
+
+.upwork-cta::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translateX(-120%);
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+    animation: cta-shine 3.2s ease-in-out infinite;
+}
+
+@keyframes feedback-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(12px); }
+}
+
+@keyframes soft-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+}
+
+@keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+@keyframes card-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes card-float-offset {
+    0%, 100% { transform: translateY(1rem); }
+    50% { transform: translateY(calc(1rem - 8px)); }
+}
+
+@keyframes quote-bob {
+    0%, 100% { transform: translateY(0); opacity: 0.25; }
+    50% { transform: translateY(-4px); opacity: 0.45; }
+}
+
+@keyframes star-glow {
+    0%, 100% { opacity: 0.85; letter-spacing: 0; }
+    50% { opacity: 1; letter-spacing: 0.5px; }
+}
+
+@keyframes cta-shine {
+    0%, 55% { transform: translateX(-120%); }
+    100% { transform: translateX(120%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .feedback-orb,
+    .feedback-badge,
+    .feedback-marquee,
+    .feedback-card,
+    .feedback-quote,
+    .verified-chip,
+    .star-twinkle,
+    .upwork-cta::after {
+        animation: none;
+    }
+
+    .feedback-card-delay {
+        transform: translateY(1rem);
     }
 }
 </style>
